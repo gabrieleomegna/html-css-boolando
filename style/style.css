@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* GOOGLE FONTS */
+body {
+    font-family: 'Gabarito', sans-serif;
+}
 
 .max-height-test {
     height: 100%;
@@ -13,28 +17,42 @@
 }
 /* HEADER */
 header {
-    height: 100px;
+    /* height: 100px; */
     background-color:rgb(255, 105, 0) ;
+    color: white;
+}
+.common-width {
+    width: 75%;
+    margin: 0 auto;
 }
 .display-flex-nav-bar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .header-nav-section {
     width: 20%;
 }
-.common-width {
-    width: 70%;
-    margin: 0 auto;
+.nav-bar {
+    padding: .8rem 0;
+    font-size: .9rem;
 }
+div.header-nav-section img {
+    width: 50%;
+}
+#image{
+    display: flex;
+    justify-content: center;
+}
+ header nav:nth-of-type(2) {
+    text-align: end;
+ }
 
 /* MAIN */
-main {
-    height: 800px;
-    background-color: blue;
-}
+
 .card {
     width: calc((100% / 3 ) - 2rem);
+    margin-top: 4rem;
 }
 .display-flex-main {
     display: flex;
@@ -42,15 +60,81 @@ main {
     justify-content: space-between;
     align-content: space-evenly;
 }
+.image-container img.first-image {
+    width: 100%;
+}
+.hover-image {
+    display: none;
+    width: 100%;
+}
+.image-container:hover img.first-image {
+    display: none;
+}
+.image-container:hover img.hover-image {
+    display: inline-block;
+}
+/* Card description */
+.description-container :nth-child(2) {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.description-container p:first-of-type {
+    font-size: .8rem;
+    color: rgb(61, 59, 63);
+} 
+.new-price {
+    color: rgb(255, 0, 0);
+    font-weight: 800;
+}
+.old-price {
+    text-decoration: line-through;
+}
+/* Card sales absolute */
+div.sales {
+    color: white;
+    position: absolute;
+    bottom: 40px;
+}
+.image-container {
+    position: relative;
+}
+div.sales :first-child {
+    background-color: rgb(255, 0, 0);
+}
+div.sales span {
+    font-size: .8rem;
+    padding: .2rem .6rem;
+}
+div.sales :nth-child(2) {
+    background-color: green;
+}
+/* Heart container absolute */
+.heart-container {
+    background-color: white;
+    position: absolute;
+    top: 0.8rem;
+    right: 0;
+    padding: 0.4rem 0.9rem;
+}
+.heart-container span {
+    font-size: 1.3rem;
+}
+.heart-container:hover span {
+    color: red;
+}
+ /* Positioning main */
+ .main-container {
+    margin-bottom: 4rem;
+ }
+
 .height-test {
     height: 40%;
 }
 /* FOOTER */
 footer {
-    height: 100px;
-    background-color: pink;
+    /* height: 100px; */
+    color: white;
+    background-color: rgb(26, 26, 26);
+    padding: 1.5rem 0;
 }
-.footer-nav-section { /* anche non mettibile, le dimensioni si modificano
-                         da sole dopo che scrivo dentro ai blocchi */
-    width: 35%;
-}
+
